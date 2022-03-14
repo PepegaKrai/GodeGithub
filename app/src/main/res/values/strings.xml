@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">Zenox</string>
+    <string name="app_name">CodeProject</string>
+    <string name="edit_message">Enter a component</string>
+    <string name="button_send">Look for potential issues</string>
+    <string name="cpu_name">CPU:</string>
+    <string name="case_name">Case:</string>
+    <string name="ram_name">Ram:</string>
+    <string name="gpu_name">GPU:</string>
+    <string name="mainboard_name">Mainboard:</string>
+    <string name="psu_name">PSU:</string>
+    <string name="hello">Hello</string>
+    <string name="cpu_fan">CPU fan:</string>
+    <string name="troubleshoot_button">Troubleshoot</string>
+    <string name="app_name2">Zenox</string>
+    <string name="potential_issue_CPU">Potential Issue CPU</string>
+    <string name="left_margin">40</string>
+    <string name="cpu_potentialissue">Insert advice</string>
+    <string name="potential_issue_GPU">Potential issue GPU</string>
+    <string name="gpu_potentialissue">Insert advice</string>
+    <string name="potential_issue_Mainboard">Potential Issue Mainboard</string>
+    <string name="mainboard_potentialissue">Insert advice</string>
+    <string name="potential_issue_Case">Potential Issue Case</string>
+    <string name="case_potentialissue">Insert advice</string>
+    <string name="potential_issue_ram">Potential Issue Ram</string>
+    <string name="ram_potential_issue">Insert advice</string>
+    <string name="potential_issue_PSU">Potential Issue PSU</string>
+    <string name="PSU_potentialissue">Insert advice</string>
+    <string name="potential_issue_CPU_Fan">Potential Issue CPU-Fan</string>
+    <string name="CPU_Fan_potentialissue">Insert advice</string>
+    <string name="save_input">Save</string>
 </resources>
