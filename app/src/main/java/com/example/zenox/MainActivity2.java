@@ -8,14 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity2 extends AppCompatActivity {
+    public static final String EXTRA_TEXT = "com.example.application.Zenox.EXTRA_TEXT";
     String CPU;
-    String CPUFan;
-    String Mainboard;
-    String GPU;
-    String Case;
-    String RAM;
-    String PSU;
-    String x;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,22 +20,23 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void SaveInput(View v) {
         EditText Text = (EditText) findViewById(R.id.editTextCPU);
-        CPU = Text.getText().toString();
+        String CPU = Text.getText().toString();
         Text = (EditText) findViewById(R.id.editTextCPUFan);
-        CPUFan = Text.getText().toString();
+        String CPUFan = Text.getText().toString();
         Text = (EditText) findViewById(R.id.editTextMainboard);
-        Mainboard = Text.getText().toString();
+        String Mainboard = Text.getText().toString();
         Text = (EditText) findViewById(R.id.editTextCase);
-        Case = Text.getText().toString();
+        String Case = Text.getText().toString();
         Text = (EditText) findViewById(R.id.editTextGPU);
-        GPU = Text.getText().toString();
+        String GPU = Text.getText().toString();
         Text = (EditText) findViewById(R.id.editTextRam);
-        RAM = Text.getText().toString();
+        String RAM = Text.getText().toString();
         Text = (EditText) findViewById(R.id.editTextPSU);
-        PSU = Text.getText().toString();
+        String PSU = Text.getText().toString();
     }
     public void goNextActivity(View x) {
         Intent intent = new Intent(this, MainActivity3.class);
+        intent.putExtra(EXTRA_TEXT, CPU);
         startActivity(intent);
 
     }

@@ -2,6 +2,7 @@ package com.example.zenox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,13 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+        Intent intent = getIntent();
+        //Taking string and setting it to variable text
+        String text = intent.getStringExtra(MainActivity2.EXTRA_TEXT);
+
+        TextView textViewb4 = (TextView) findViewById(R.id.textViewb4);
+        //setting the text
+        textViewb4.setText(text);
 
     }
     public void OpenAdvice(View v){

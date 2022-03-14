@@ -11,9 +11,11 @@
         android:theme="@style/Theme.Zenox">
         <activity
             android:name=".MainActivity3"
+            android:parentActivityName=".MainActivity2"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
