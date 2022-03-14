@@ -44,5 +44,5 @@ public class MainActivity3 extends AppCompatActivity {
                 break;
         }
         txt.setVisibility(View.VISIBLE);
+        }
     }
-}
