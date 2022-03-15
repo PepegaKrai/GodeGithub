@@ -22,8 +22,8 @@ public class MainActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
         //assign textviewCPU the id of the 'textview' that will change its content
         textViewCPU = findViewById(R.id.textViewb4);
-        Intent Intent = getIntent();
-        String new_CPU = Intent.getStringExtra(MainActivity2.EXTRA_CPU);
+        Intent intent = getIntent();
+        String new_CPU = intent.getStringExtra(MainActivity2.EXTRA_CPU);
 
         textViewCPU.setText(new_CPU);
 
