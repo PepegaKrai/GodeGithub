@@ -8,35 +8,36 @@ import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity2 extends AppCompatActivity {
-    public static final String EXTRA_TEXT = "com.example.application.Zenox.EXTRA_TEXT";
-    String CPU;
 
+    //Defining the edittext
+    EditText editText;
+
+    //creating and defining the variable that will be sent to next activity
+    public final static String EXTRA_CPU = "cpu";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-    }
 
+        //assigning variable the id of the user input we want to save
+        editText = findViewById(R.id.editTextCPU);
+
+    }
     public void SaveInput(View v) {
-        EditText Text = (EditText) findViewById(R.id.editTextCPU);
-        String CPU = Text.getText().toString();
-        Text = (EditText) findViewById(R.id.editTextCPUFan);
-        String CPUFan = Text.getText().toString();
-        Text = (EditText) findViewById(R.id.editTextMainboard);
-        String Mainboard = Text.getText().toString();
-        Text = (EditText) findViewById(R.id.editTextCase);
-        String Case = Text.getText().toString();
-        Text = (EditText) findViewById(R.id.editTextGPU);
-        String GPU = Text.getText().toString();
-        Text = (EditText) findViewById(R.id.editTextRam);
-        String RAM = Text.getText().toString();
-        Text = (EditText) findViewById(R.id.editTextPSU);
-        String PSU = Text.getText().toString();
+
+        //Creating intent that will "link" this activity to the next one
+        Intent intent = new Intent(this, MainActivity3.class);
+
+        //create and assign what the user wrote inside to STRING CPU
+
+        String CPU = editText.getText().toString();
+
+        //assign whats written inside the variable CPU to EXTRA_CPU
+        intent.putExtra(EXTRA_CPU, CPU);
     }
     public void goNextActivity(View x) {
         Intent intent = new Intent(this, MainActivity3.class);
-        intent.putExtra(EXTRA_TEXT, CPU);
         startActivity(intent);
 
     }

@@ -11,18 +11,21 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class MainActivity3 extends AppCompatActivity {
+    //txt will be used to store Textview id that needs to appear on screen
     TextView txt;
+    //textViewCPU will be used to store textView id of the textview that needs to have its content changed
+    TextView textViewCPU;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
-        Intent intent = getIntent();
-        //Taking string and setting it to variable text
-        String text = intent.getStringExtra(MainActivity2.EXTRA_TEXT);
+        //assign textviewCPU the id of the 'textview' that will change its content
+        textViewCPU = findViewById(R.id.textViewb4);
+        Intent Intent = getIntent();
+        String new_CPU = Intent.getStringExtra(MainActivity2.EXTRA_CPU);
 
-        TextView textViewb4 = (TextView) findViewById(R.id.textViewb4);
-        //setting the text
-        textViewb4.setText(text);
+        textViewCPU.setText(new_CPU);
 
     }
     public void OpenAdvice(View v){

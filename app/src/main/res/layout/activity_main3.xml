@@ -24,7 +24,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
         android:text="@string/cpu_potentialissue"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/b4" />
 
