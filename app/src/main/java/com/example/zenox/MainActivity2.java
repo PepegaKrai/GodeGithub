@@ -13,7 +13,7 @@ public class MainActivity2 extends AppCompatActivity {
     EditText editText;
 
     //creating and defining the variable that will be sent to next activity
-    public final static String EXTRA_CPU = "CPU";
+    //public final static String EXTRA_CPU = "CPU";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +24,10 @@ public class MainActivity2 extends AppCompatActivity {
         editText = findViewById(R.id.editTextCPU);
 
     }
-    public void SaveInput(View v) {
-
-        //Creating intent that will "link" this activity to the next one
+    public void SaveInput(View v) {//Creating intent that will "link" this activity to the next one
         Intent intent = new Intent(this, MainActivity3.class);
-
     }
+
     public void goNextActivity(View x) {
         Intent intent = new Intent(this, MainActivity3.class);
 
@@ -38,7 +36,7 @@ public class MainActivity2 extends AppCompatActivity {
         String CPU = editText.getText().toString();
 
         //assign whats written inside the variable CPU to EXTRA_CPU
-        intent.putExtra(EXTRA_CPU, CPU);
+        intent.putExtra("TEST", "x");
         startActivity(intent);
 
     }

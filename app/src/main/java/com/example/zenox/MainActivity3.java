@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,7 +14,8 @@ import org.w3c.dom.Text;
 public class MainActivity3 extends AppCompatActivity {
     //txt will be used to store Textview id that needs to appear on screen
     TextView txt;
-    //textViewCPU will be used to store textView id of the textview that needs to have its content changed
+    String txtCPU;
+    //textViewCPU will be used to store textView id of the textview that needs to have its attributes changed
     TextView textViewCPU;
 
     @Override
@@ -23,12 +25,18 @@ public class MainActivity3 extends AppCompatActivity {
         //assign textviewCPU the id of the 'textview' that will change its content
         textViewCPU = findViewById(R.id.textViewb4);
         Intent intent = getIntent();
-        String new_CPU = intent.getStringExtra(MainActivity2.EXTRA_CPU);
+        String new_CPU = intent.getExtras().getString("TEST");
+        if (new_CPU == "x") {
+        textViewCPU.setText("Hi heres the solution");
+        }
+        else {
+            txtCPU = "xxx";
+        }
 
-        textViewCPU.setText(new_CPU);
+        }
 
-    }
     public void OpenAdvice(View v){
+        //set the id of pressed button to int id
         int id = v.getId();
 
         switch (id){
@@ -55,5 +63,7 @@ public class MainActivity3 extends AppCompatActivity {
                 break;
         }
         txt.setVisibility(View.VISIBLE);
+;
+
         }
-    }
+        }
