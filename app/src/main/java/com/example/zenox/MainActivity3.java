@@ -29,7 +29,7 @@ public class MainActivity3 extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String new_CPU = intent.getExtras().getString("CPU");
+        String new_CPU = intent.getStringExtra(MainActivity2.EXTRA_CPU);
 
         //here is a test to see whether if function would work.
         //possible could be by example if new cpu i7-9700k TextViewCPU.setText("Here is a yt video in which someone built this exact model into his build.
