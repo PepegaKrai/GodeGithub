@@ -19,6 +19,7 @@ public class MainActivity3 extends AppCompatActivity {
     //textViewCPU will be used to store textView id of the textview that needs to have its attributes changed
     TextView textViewCPU;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
