@@ -14,6 +14,7 @@ import org.w3c.dom.Text;
 public class MainActivity3 extends AppCompatActivity {
     //txt will be used to store Textview id that needs to appear on screen
     TextView txt;
+
     String txtCPU;
     //textViewCPU will be used to store textView id of the textview that needs to have its attributes changed
     TextView textViewCPU;
@@ -22,14 +23,20 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
         //assign textviewCPU the id of the 'textview' that will change its content
         textViewCPU = findViewById(R.id.textViewb4);
+
         Intent intent = getIntent();
-        String new_CPU = intent.getExtras().getString("TEST");
+
+        String new_CPU = intent.getExtras().getString("CPU");
+
+        //here is a test to see whether if function would work.
+        //possible could be by example if new cpu i7-9700k TextViewCPU.setText("Here is a yt video in which someone built this exact model into his build.
         if (new_CPU == "x") {
         textViewCPU.setText("Hi heres the solution");
         }
-        else {
+        else { //in actual code else would be replaced with elif, it will check for all kinds of cpu brands/models by looking like :elif (new_CPU=="model") etc.
             txtCPU = "xxx";
         }
 
